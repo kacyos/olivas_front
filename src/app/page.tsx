@@ -1,5 +1,9 @@
-import styles from "./page.module.scss";
+import { NavBar } from "./components/NavBar";
 
 export default function Home() {
-  return <main className={styles.main}></main>;
+  return (
+    <main>
+      <NavBar />
+    </main>
+  );
 }
