@@ -1,5 +1,6 @@
 import { Card } from "./components/Card";
 import { NavBar } from "./components/NavBar";
+import { Slider } from "./components/Slider";
 import style from "./page.module.scss";
 
 interface INotices {
@@ -97,25 +98,32 @@ export default async function Home() {
 
         <section className={style.main_news}>
           <div className={style.notices}>
-            <div className={style.title_main_news}>
-              <h2>Principais notícias</h2>
-              <div></div>
-            </div>
+            <div>
+              <div className={style.title_main_news}>
+                <h2>Principais notícias</h2>
+                <div></div>
+              </div>
 
-            {notices.slice(0, 3).map((notice) => (
-              <>
-                <Card
-                  dateTop={true}
-                  tagColor="blue"
-                  key={notice.id}
-                  tag={notice.type}
-                  title={notice.yoast_head_json.title}
-                  date={formatDate(
-                    notice.yoast_head_json.article_published_time
-                  )}
-                />
-              </>
-            ))}
+              {notices.slice(4, 7).map((notice) => (
+                <>
+                  <Card
+                    dateTop={true}
+                    tagColor="blue"
+                    key={notice.id}
+                    tag={notice.type}
+                    title={notice.yoast_head_json.title}
+                    date={formatDate(
+                      notice.yoast_head_json.article_published_time
+                    )}
+                  />
+                </>
+              ))}
+            </div>
+            <div className={style.carousel}>
+              <div>
+                <Slider />
+              </div>
+            </div>
           </div>
         </section>
       </section>

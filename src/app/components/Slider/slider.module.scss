@@ -1,0 +1,42 @@
+.carousel_container {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: auto;
+  overflow: hidden;
+
+  .cards_container {
+    display: flex;
+    gap: 2px;
+    width: 400px;
+  }
+
+  .carousel_card {
+    width: 400px;
+
+    & div {
+      width: 400px;
+
+      img {
+        object-fit: contain;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.control_buttons {
+  position: absolute;
+  width: 100%;
+  .left {
+    height: 80px;
+    position: relative;
+    bottom: 200px;
+    right: 10px;
+  }
+
+  .right {
+    position: relative;
+    bottom: 200px;
+    left: 392px;
+  }
+}
