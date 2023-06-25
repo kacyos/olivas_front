@@ -147,7 +147,3 @@ export function NavBar() {
     </nav>
   );
 }
-/*
-
- 
-*/

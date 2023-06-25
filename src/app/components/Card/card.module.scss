@@ -1,0 +1,44 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  gap: 10px;
+  width: 80%;
+  border-bottom: 1px solid var(--gray-light);
+
+  .blue {
+    background: var(--gradient-blue);
+    padding: 2px 8px;
+    border-radius: 32px;
+  }
+
+  .pink {
+    background: var(--gradient-pink);
+    padding: 2px 8px;
+    border-radius: 32px;
+  }
+
+  > span {
+    color: var(--blue-medium);
+  }
+
+  & > p {
+    color: var(--blue-dark);
+  }
+  //  background-color: aqua;
+}
+
+.card.title {
+  border: none;
+  width: 100%;
+  & > p {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    width: 70%;
+  }
+}

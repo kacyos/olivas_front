@@ -13,7 +13,8 @@
   --blue-dark: #00374e;
   --blue-medium: #006999;
   --blue-intense: #022776;
-  --blue-light: #36b6c7;
+  --blue-light: #37b7c8;
+  --blue-lighter: #6dc7d4;
 
   --pink-medium: #e46b88;
   --pink-light: #f390a8;
@@ -22,6 +23,18 @@
     90deg,
     var(--green-medium) 0%,
     var(--green-light) 100%
+  );
+
+  --gradient-pink: linear-gradient(
+    90deg,
+    var(--pink-medium) 0%,
+    var(--pink-light) 100%
+  );
+
+  --gradient-blue: linear-gradient(
+    90deg,
+    var(--blue-light) 0%,
+    var(--blue-lighter) 100%
   );
 }
 
