@@ -20,6 +20,10 @@ export default async function Home() {
     "https://www.olivas.digital/wp-json/wp/v2/posts?categories=373"
   );
 
+  const casesResponse = await fetch(
+    "https://www.olivas.digital/wp-json/wp/v2/posts?categories=403"
+  );
+
   const notices: INotices[] = await response.json();
 
   const formatDate = (date: string) => {
@@ -89,8 +93,31 @@ export default async function Home() {
               </div>
             </aside>
           </div>
-          <div></div>
         </div>
+
+        <section className={style.main_news}>
+          <div className={style.notices}>
+            <div className={style.title_main_news}>
+              <h2>Principais notícias</h2>
+              <div></div>
+            </div>
+
+            {notices.slice(0, 3).map((notice) => (
+              <>
+                <Card
+                  dateTop={true}
+                  tagColor="blue"
+                  key={notice.id}
+                  tag={notice.type}
+                  title={notice.yoast_head_json.title}
+                  date={formatDate(
+                    notice.yoast_head_json.article_published_time
+                  )}
+                />
+              </>
+            ))}
+          </div>
+        </section>
       </section>
     </main>
   );

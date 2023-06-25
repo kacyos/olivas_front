@@ -19,11 +19,16 @@ export function Card(
   }
 ) {
   return (
-    <div className={`${style.card} ${isTitle ? style.title : ""}`}>
+    <div
+      className={`${style.card} ${isTitle ? style.title : ""} ${
+        style[tagColor]
+      }`}
+    >
+      {dateTop && <span>{date}</span>}
       <div>
         <span className={style[tagColor]}>{tag}</span>
       </div>
-      {dateTop && <span>{date}</span>}
+
       <p>{title}</p>
       {!dateTop && <span>{date}</span>}
     </div>

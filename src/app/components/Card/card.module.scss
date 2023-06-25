@@ -1,10 +1,10 @@
 .card {
   display: flex;
   flex-direction: column;
-  padding: 4px;
+  padding: 7px;
   gap: 10px;
   width: 80%;
-  border-bottom: 1px solid var(--gray-light);
+  border-top: 1px solid var(--gray-light);
 
   .blue {
     background: var(--gradient-blue);
@@ -36,7 +36,15 @@
     font-weight: bold;
   }
 }
+.card.blue {
+  > span {
+    color: var(--white);
+  }
 
+  & > p {
+    color: var(--white);
+  }
+}
 @media screen and (min-width: 768px) {
   .card {
     width: 70%;

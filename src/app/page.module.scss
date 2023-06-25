@@ -24,7 +24,7 @@
     .line {
       margin: 20px auto;
       width: 50px;
-      background-color: aqua;
+      background-color: var(--blue-light);
       border-radius: 16px;
       border-bottom: 7px solid var(--blue-light);
     }
@@ -90,6 +90,30 @@
         }
       }
     }
+  }
+}
+
+.main_news {
+  background-color: var(--green-light);
+  padding: 20px 100px;
+
+  .title_main_news {
+    padding-top: 5vh;
+    margin-bottom: 40px;
+
+    & h2 {
+      color: var(--white);
+    }
+
+    & > div {
+      width: 50px;
+      border-radius: 16px;
+      border-bottom: 7px solid var(--white);
+    }
+  }
+
+  .notices {
+    width: 50%;
   }
 }
 
